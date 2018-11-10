@@ -21,6 +21,8 @@ namespace Tests
             };
 
             var results = ob.Validate().ToList();
+
+            Assert.AreEqual(3, results.Count);
         }
 
         private enum TestEnumInt
@@ -40,7 +42,6 @@ namespace Tests
         private class TestClass
         {
             public string Code { get; set; }
-
             public string EnumInt { get; set; }
             public string EnumChar { get; set; }
 

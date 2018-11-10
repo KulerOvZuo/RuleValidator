@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 namespace RuleValidator
 {
     using RuleValidator.Internal;
-    using System;
-    using System.Linq.Expressions;
 
     public static class Rule
     {

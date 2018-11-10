@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace RuleValidator.Internal
 {
-    public abstract class BaseRule : IRule, IRuleValidator
+    internal abstract class BaseRule : IRule, IRuleValidator
     {
         public bool NullISValid { get; private set; } = false;
         public string PropertyName { get; private set; }
@@ -68,7 +68,7 @@ namespace RuleValidator.Internal
         #endregion
     }
 
-    public class RuleIsEnum<T> : BaseRule, IRule
+    internal class RuleIsEnum<T> : BaseRule, IRule
         where T : struct
     {
         internal RuleIsEnum(object value) : base(value) { }
@@ -82,7 +82,7 @@ namespace RuleValidator.Internal
             $"Value '{this.Value?.ToString()}' is not valid in context of enum type '{typeof(T).Name}'";
     }
 
-    public class RuleIsTrue : BaseRule, IRule
+    internal class RuleIsTrue : BaseRule, IRule
     {
         internal RuleIsTrue(bool value) : base(value) { }
 
@@ -95,7 +95,7 @@ namespace RuleValidator.Internal
             $"Value '{this.Value?.ToString()}' is not 'True'";
     }
 
-    public class RuleIsIn<T> : BaseRule, IRule
+    internal class RuleIsIn<T> : BaseRule, IRule
     {
         private IEnumerable<T> IsIn;
 

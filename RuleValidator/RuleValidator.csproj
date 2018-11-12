@@ -42,7 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RuleValidator.Internal.cs" />
+    <Compile Include="Rules\RuleAreEqual.cs" />
+    <Compile Include="Rules\RuleIsTrue.cs" />
+    <Compile Include="Rules\RuleIsIn.cs" />
+    <Compile Include="Rules\RuleIsEnum.cs" />
+    <Compile Include="BaseRule.cs" />
     <Compile Include="RuleValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
